@@ -23,6 +23,10 @@ else
     USE_TBB=Linux
     CXX_STD = CXX11
   endif
+  ifeq ($(UNAME), SunOS)
+    USE_TBB=SunOS
+    CXX_STD = CXX11
+  endif
   # Note: regular MinGW not supported
 
 endif

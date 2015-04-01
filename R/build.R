@@ -51,7 +51,8 @@ tbbLibPath <- function(suffix = "") {
    tbbSupported <- list(
       "Darwin" = paste("libtbb", suffix, ".dylib", sep = ""), 
       "Linux" = paste("libtbb", suffix, ".so.2", sep = ""), 
-      "Windows" = paste("tbb", suffix, ".dll", sep = "") 
+      "Windows" = paste("tbb", suffix, ".dll", sep = ""),
+      "SunOS" = paste("libtbb", suffix, ".so", sep = "")
    )
    if (sysname %in% names(tbbSupported)) {
       libDir <- "lib/"
